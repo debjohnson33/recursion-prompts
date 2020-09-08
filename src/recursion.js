@@ -29,14 +29,10 @@ var sum = function(array) {
     return array[0];
   }
 
-  var arrayCopy = array.map((n) => n);
-  console.log(arrayCopy);
-  var total = 0;
-  while (arrayCopy.length > 0) {
-    var num = arrayCopy.shift();
-    total = total + num;
-    console.log(total);
-  }
+  var arrayCopy = array.slice();
+  var shifted = arrayCopy.shift();
+
+  return shifted += sum(arrayCopy);
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
