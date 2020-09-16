@@ -205,6 +205,9 @@ var modulo = function(x, y) {
   if (x > 0 && y < 0) {
     y = -y;
   }
+  if (x < y) {
+    return x;
+  }
     return modulo(x - y, y);
 };
 
