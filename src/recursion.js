@@ -222,8 +222,9 @@ var multiply = function(x, y) {
   if (y < 0) {
     return -multiply(x, -y);
   }
-
-  return x + multiply(x, y - 1);
+  if (y > 0) {
+    return x + multiply(x, y - 1);
+  }
 };
 
 // 13. Write a function that divides two numbers without using the / operator or
