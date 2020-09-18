@@ -214,10 +214,10 @@ var multiply = function(x, y) {
     return x;
   }
   if (x < 0 && y < 0) {
-    return x + multiply(-x, -y);
+    return multiply(-x, -y);
   }
   if (x < 0) {
-    return multiply(-x, y - 1);
+    return -multiply(-x, y);
   }
   if (y < 0) {
     return -multiply(x, -y);
